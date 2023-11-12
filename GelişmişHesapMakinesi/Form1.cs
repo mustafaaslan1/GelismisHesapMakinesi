@@ -26,7 +26,7 @@ namespace GelişmişHesapMakinesi
 
         private void İslemler(object sender, EventArgs e)
         {
-
+   
             Button btn = (Button)sender;
             if (btn.Text == "+")
             {
@@ -53,6 +53,60 @@ namespace GelişmişHesapMakinesi
                 secim = 4;
                 textBox1.Text = "0";
             }
+            if (btn.Text == "EBOB")
+            {
+                string[] girilendeger = textBox1.Text.Split(',');
+                if (girilendeger.Length != 2)
+                {
+                    MessageBox.Show("Lütfen virgülle ayrılmış iki sayı giriniz.");
+                    return;
+
+                }
+
+                double s1 = Convert.ToInt32(girilendeger[0]);
+                double s2 = Convert.ToInt32(girilendeger[1]);
+                int ebob = 0;
+                for (int i = 1; i <= s1 && i <= s2; i++)
+                {
+                    if (s1 % i == 0 && s2 % i == 0)
+                    {
+                        ebob = i;
+                    }
+                }
+                textBox1.Text = $"Ebob = {ebob}";
+                label1.Text = $"Ebob = {girilendeger[0]}, {girilendeger[1]}";
+                string isaret = ebob == 1 ? "" : " ve";
+                geçmiş.Add($"{s1} ve {s2} için EBOB = {ebob}");
+                label3.Text = $"{RomanRakamlariYazdir(ebob)}";
+            }
+            else if (btn.Text == "EKOK")
+            {
+                string[] girilendeger = textBox1.Text.Split(',');
+                if (girilendeger.Length != 2)
+                {
+                    MessageBox.Show("Lütfen virgülle ayrılmış iki sayı giriniz.");
+                    return;
+
+                }
+
+                int s1 = Convert.ToInt32(girilendeger[0]);
+                int s2 = Convert.ToInt32(girilendeger[1]);
+                int max = Math.Max(s1, s2);
+                int ekok = 0;
+                for (int i = max; ; i--)
+                {
+                    if (i % s1 == 0 && i % s2 == 0)
+                    {
+                        ekok = i;
+                        break;
+                    }
+                }
+                textBox1.Text = $"Ekok = {ekok}";
+                label1.Text = $"Ekok = {girilendeger[0]}, {girilendeger[1]}";
+                geçmiş.Add($"{s1} ve {s2} için EKOK = {ekok}");
+                label3.Text = $"{RomanRakamlariYazdir(ekok)}";
+
+            }
             else if (btn.Text == "x²")
             {
                 double kare = Convert.ToDouble(textBox1.Text);
@@ -64,7 +118,7 @@ namespace GelişmişHesapMakinesi
                 label3.Text = $"{RomanRakamlariYazdir(double.Parse(textBox1.Text))}";
 
             }
-            else if(btn.Text == "x³")
+            else if (btn.Text == "x³")
             {
                 double küp = Convert.ToDouble(textBox1.Text);
                 double s1 = Convert.ToDouble(textBox1.Text);
@@ -74,11 +128,11 @@ namespace GelişmişHesapMakinesi
                 geçmiş.Add($"{s1}{isaret} = {textBox1.Text}");
                 label3.Text = $"{RomanRakamlariYazdir(double.Parse(textBox1.Text))}";
             }
-            else if(btn.Text == "1/x")
+            else if (btn.Text == "1/x")
             {
                 double.TryParse(textBox1.Text, out s1);
                 label1.Text = "1/" + s1;
-                if (s1 != 0) textBox1.Text = (1 / s1).ToString(); 
+                if (s1 != 0) textBox1.Text = (1 / s1).ToString();
                 else label1.Text = "HATA";
                 string isaret = ("1/");
                 geçmiş.Add($"{isaret}{s1} = {textBox1.Text}");
@@ -89,10 +143,10 @@ namespace GelişmişHesapMakinesi
                 secim = 6;
                 if (s1 != 0)
                 {
-                    
+
                     double sayi;
                     double.TryParse(textBox1.Text, out sayi);
-                    if (sayi == 0) label1.Text = "HATA"; 
+                    if (sayi == 0) label1.Text = "HATA";
                     else textBox1.Text = (s1 % sayi).ToString();
                 }
                 double.TryParse(textBox1.Text, out s1);
@@ -125,10 +179,11 @@ namespace GelişmişHesapMakinesi
             }
             else if (btn.Text == "<")
             {
-               textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
                 if (textBox1.Text == "")
                 {
                     textBox1.Text = "0";
+
                 }
 
             }
@@ -172,7 +227,7 @@ namespace GelişmişHesapMakinesi
                     double currentNumber = double.Parse(textBox1.Text);
                     textBox1.Text = (-currentNumber).ToString();
                 }
-            
+
             }
             if (btn.Text == "=")
             {
@@ -249,6 +304,7 @@ namespace GelişmişHesapMakinesi
         {
             listBox1.Items.Clear();
             listBox1.Items.AddRange(geçmiş.ToArray());
+
         }
         private string RomanRakamlariYazdir(double sayi)
         {
@@ -268,7 +324,6 @@ namespace GelişmişHesapMakinesi
             int birlerBasamagi = (int)(sayi % 10);
 
             return binler[binlerBasamagi] + yuzler[yuzlerBasamagi] + onlar[onlarBasamagi] + birler[birlerBasamagi];
-
         }
 
         private void standartToolStripMenuItem_Click(object sender, EventArgs e)
@@ -280,6 +335,7 @@ namespace GelişmişHesapMakinesi
             textBox1.Size = new System.Drawing.Size(260, 80);
             this.Width = 310;
             this.Height = 500;
+
         }
 
         private void gelişmişToolStripMenuItem_Click(object sender, EventArgs e)
@@ -287,7 +343,6 @@ namespace GelişmişHesapMakinesi
             groupBox1.Visible = true;
             groupBox4.Visible = true;
             btnGeçmiş.Visible = true;
-
             groupBox2.Size = new System.Drawing.Size(420, 110);
             textBox1.Size = new System.Drawing.Size(410,80);
             this.Width = 678;
@@ -306,8 +361,7 @@ namespace GelişmişHesapMakinesi
                 " 4- Köklü sayı hesaplaması yapmak istediğiniz zaman önce sayıya tıklayıp ardından kök işaretine tıklayınız.\n\n" +
                 " 5- Pi sayısını hesaplamak istiyorsanız sadece 'Pİ' ikonuna tıklamanız yeterlidir." +
                 " NOT : Kare ve küp işlemlerinde = 'e basmanıza gerek yoktur. Sayı seçip kare veya kök tuşuna bastığınızda sonucu görebilirsiniz.\n\n" +
-                " NOT : Yaptığınız işlemler kaydedilmektedir, Geçmiş butonuna tıklarsanız yaptığınız işlemleri görebilirsiniz.\\n\\n", "Gelişmiş Hesap Makinesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                " NOT : Yaptığınız işlemler kaydedilmektedir, Geçmiş butonuna tıklarsanız yaptığınız işlemleri görebilirsiniz.\n\n", "Gelişmiş Hesap Makinesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         } 
 
         private void btnVirgül_Click(object sender, EventArgs e)

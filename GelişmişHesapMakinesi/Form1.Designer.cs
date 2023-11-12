@@ -64,6 +64,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnEkok = new System.Windows.Forms.Button();
+            this.btnEbob = new System.Windows.Forms.Button();
             this.btnTaban = new System.Windows.Forms.Button();
             this.btnKüp = new System.Windows.Forms.Button();
             this.btnKare = new System.Windows.Forms.Button();
@@ -122,7 +124,7 @@
             this.btnÜs.BackColor = System.Drawing.SystemColors.Control;
             this.btnÜs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnÜs.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnÜs.Location = new System.Drawing.Point(118, 39);
+            this.btnÜs.Location = new System.Drawing.Point(118, 38);
             this.btnÜs.Name = "btnÜs";
             this.btnÜs.Size = new System.Drawing.Size(71, 55);
             this.btnÜs.TabIndex = 1;
@@ -135,7 +137,7 @@
             this.btnFaktoriyel.BackColor = System.Drawing.SystemColors.Control;
             this.btnFaktoriyel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnFaktoriyel.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnFaktoriyel.Location = new System.Drawing.Point(118, 111);
+            this.btnFaktoriyel.Location = new System.Drawing.Point(118, 99);
             this.btnFaktoriyel.Name = "btnFaktoriyel";
             this.btnFaktoriyel.Size = new System.Drawing.Size(71, 55);
             this.btnFaktoriyel.TabIndex = 1;
@@ -206,7 +208,7 @@
             this.btnPi.BackColor = System.Drawing.SystemColors.Control;
             this.btnPi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnPi.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnPi.Location = new System.Drawing.Point(19, 111);
+            this.btnPi.Location = new System.Drawing.Point(19, 99);
             this.btnPi.Name = "btnPi";
             this.btnPi.Size = new System.Drawing.Size(71, 55);
             this.btnPi.TabIndex = 1;
@@ -343,7 +345,7 @@
             this.btnKök.BackColor = System.Drawing.SystemColors.Control;
             this.btnKök.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKök.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnKök.Location = new System.Drawing.Point(19, 186);
+            this.btnKök.Location = new System.Drawing.Point(19, 161);
             this.btnKök.Name = "btnKök";
             this.btnKök.Size = new System.Drawing.Size(71, 55);
             this.btnKök.TabIndex = 1;
@@ -489,6 +491,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnEkok);
+            this.groupBox4.Controls.Add(this.btnEbob);
             this.groupBox4.Controls.Add(this.btnTaban);
             this.groupBox4.Controls.Add(this.btnKüp);
             this.groupBox4.Controls.Add(this.btnKare);
@@ -503,12 +507,38 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
+            // btnEkok
+            // 
+            this.btnEkok.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEkok.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEkok.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEkok.Location = new System.Drawing.Point(118, 292);
+            this.btnEkok.Name = "btnEkok";
+            this.btnEkok.Size = new System.Drawing.Size(71, 55);
+            this.btnEkok.TabIndex = 2;
+            this.btnEkok.Text = "EKOK";
+            this.btnEkok.UseVisualStyleBackColor = false;
+            this.btnEkok.Click += new System.EventHandler(this.İslemler);
+            // 
+            // btnEbob
+            // 
+            this.btnEbob.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEbob.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEbob.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEbob.Location = new System.Drawing.Point(19, 292);
+            this.btnEbob.Name = "btnEbob";
+            this.btnEbob.Size = new System.Drawing.Size(71, 55);
+            this.btnEbob.TabIndex = 2;
+            this.btnEbob.Text = "EBOB";
+            this.btnEbob.UseVisualStyleBackColor = false;
+            this.btnEbob.Click += new System.EventHandler(this.İslemler);
+            // 
             // btnTaban
             // 
             this.btnTaban.BackColor = System.Drawing.SystemColors.Control;
             this.btnTaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTaban.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnTaban.Location = new System.Drawing.Point(19, 257);
+            this.btnTaban.Location = new System.Drawing.Point(19, 228);
             this.btnTaban.Name = "btnTaban";
             this.btnTaban.Size = new System.Drawing.Size(71, 55);
             this.btnTaban.TabIndex = 2;
@@ -521,7 +551,7 @@
             this.btnKüp.BackColor = System.Drawing.SystemColors.Control;
             this.btnKüp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKüp.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnKüp.Location = new System.Drawing.Point(118, 257);
+            this.btnKüp.Location = new System.Drawing.Point(118, 228);
             this.btnKüp.Name = "btnKüp";
             this.btnKüp.Size = new System.Drawing.Size(71, 55);
             this.btnKüp.TabIndex = 2;
@@ -534,7 +564,7 @@
             this.btnKare.BackColor = System.Drawing.SystemColors.Control;
             this.btnKare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKare.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnKare.Location = new System.Drawing.Point(118, 186);
+            this.btnKare.Location = new System.Drawing.Point(118, 161);
             this.btnKare.Name = "btnKare";
             this.btnKare.Size = new System.Drawing.Size(71, 55);
             this.btnKare.TabIndex = 2;
@@ -675,6 +705,8 @@
         private System.Windows.Forms.Button btnTaban;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnEkok;
+        private System.Windows.Forms.Button btnEbob;
     }
 }
 
