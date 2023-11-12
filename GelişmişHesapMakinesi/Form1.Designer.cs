@@ -60,24 +60,25 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.nasılKullanılırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnTaban = new System.Windows.Forms.Button();
+            this.btnKüp = new System.Windows.Forms.Button();
             this.btnKare = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.görünümToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.standartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelişmişToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnKüp = new System.Windows.Forms.Button();
-            this.btnTaban = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nasılKullanılırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnC
@@ -192,7 +193,7 @@
             this.btnMod.BackColor = System.Drawing.SystemColors.Control;
             this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMod.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnMod.Location = new System.Drawing.Point(19, 39);
+            this.btnMod.Location = new System.Drawing.Point(19, 36);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(71, 55);
             this.btnMod.TabIndex = 1;
@@ -364,13 +365,14 @@
             // 
             // btnGeçmiş
             // 
+            this.btnGeçmiş.BackColor = System.Drawing.SystemColors.Control;
             this.btnGeçmiş.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeçmiş.Location = new System.Drawing.Point(39, 576);
+            this.btnGeçmiş.Image = ((System.Drawing.Image)(resources.GetObject("btnGeçmiş.Image")));
+            this.btnGeçmiş.Location = new System.Drawing.Point(67, 563);
             this.btnGeçmiş.Name = "btnGeçmiş";
-            this.btnGeçmiş.Size = new System.Drawing.Size(169, 43);
+            this.btnGeçmiş.Size = new System.Drawing.Size(69, 65);
             this.btnGeçmiş.TabIndex = 2;
-            this.btnGeçmiş.Text = "Geçmiş";
-            this.btnGeçmiş.UseVisualStyleBackColor = true;
+            this.btnGeçmiş.UseVisualStyleBackColor = false;
             this.btnGeçmiş.Click += new System.EventHandler(this.btnGeçmiş_Click);
             // 
             // label1
@@ -437,6 +439,16 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(207, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
@@ -491,62 +503,18 @@
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             // 
-            // menuStrip1
+            // btnTaban
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.görünümToolStripMenuItem,
-            this.nasılKullanılırToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 28);
-            this.menuStrip1.TabIndex = 14;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // nasılKullanılırToolStripMenuItem
-            // 
-            this.nasılKullanılırToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nasılKullanılırToolStripMenuItem.Image")));
-            this.nasılKullanılırToolStripMenuItem.Name = "nasılKullanılırToolStripMenuItem";
-            this.nasılKullanılırToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
-            this.nasılKullanılırToolStripMenuItem.Text = "Nasıl Kullanılır?";
-            this.nasılKullanılırToolStripMenuItem.Click += new System.EventHandler(this.nasılKullanılırToolStripMenuItem_Click);
-            // 
-            // btnKare
-            // 
-            this.btnKare.BackColor = System.Drawing.SystemColors.Control;
-            this.btnKare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKare.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnKare.Location = new System.Drawing.Point(118, 186);
-            this.btnKare.Name = "btnKare";
-            this.btnKare.Size = new System.Drawing.Size(71, 55);
-            this.btnKare.TabIndex = 2;
-            this.btnKare.Text = "x²";
-            this.btnKare.UseVisualStyleBackColor = false;
-            this.btnKare.Click += new System.EventHandler(this.İslemler);
-            // 
-            // görünümToolStripMenuItem
-            // 
-            this.görünümToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.standartToolStripMenuItem,
-            this.gelişmişToolStripMenuItem});
-            this.görünümToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("görünümToolStripMenuItem.Image")));
-            this.görünümToolStripMenuItem.Name = "görünümToolStripMenuItem";
-            this.görünümToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
-            this.görünümToolStripMenuItem.Text = "Görünüm";
-            // 
-            // standartToolStripMenuItem
-            // 
-            this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
-            this.standartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.standartToolStripMenuItem.Text = "Standart";
-            this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
-            // 
-            // gelişmişToolStripMenuItem
-            // 
-            this.gelişmişToolStripMenuItem.Name = "gelişmişToolStripMenuItem";
-            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.gelişmişToolStripMenuItem.Text = "Gelişmiş";
-            this.gelişmişToolStripMenuItem.Click += new System.EventHandler(this.gelişmişToolStripMenuItem_Click);
+            this.btnTaban.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTaban.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTaban.Location = new System.Drawing.Point(19, 257);
+            this.btnTaban.Name = "btnTaban";
+            this.btnTaban.Size = new System.Drawing.Size(71, 55);
+            this.btnTaban.TabIndex = 2;
+            this.btnTaban.Text = "1/x";
+            this.btnTaban.UseVisualStyleBackColor = false;
+            this.btnTaban.Click += new System.EventHandler(this.İslemler);
             // 
             // btnKüp
             // 
@@ -561,28 +529,72 @@
             this.btnKüp.UseVisualStyleBackColor = false;
             this.btnKüp.Click += new System.EventHandler(this.İslemler);
             // 
-            // btnTaban
+            // btnKare
             // 
-            this.btnTaban.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTaban.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnTaban.Location = new System.Drawing.Point(19, 257);
-            this.btnTaban.Name = "btnTaban";
-            this.btnTaban.Size = new System.Drawing.Size(71, 55);
-            this.btnTaban.TabIndex = 2;
-            this.btnTaban.Text = "1/x";
-            this.btnTaban.UseVisualStyleBackColor = false;
-            this.btnTaban.Click += new System.EventHandler(this.İslemler);
+            this.btnKare.BackColor = System.Drawing.SystemColors.Control;
+            this.btnKare.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKare.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnKare.Location = new System.Drawing.Point(118, 186);
+            this.btnKare.Name = "btnKare";
+            this.btnKare.Size = new System.Drawing.Size(71, 55);
+            this.btnKare.TabIndex = 2;
+            this.btnKare.Text = "x²";
+            this.btnKare.UseVisualStyleBackColor = false;
+            this.btnKare.Click += new System.EventHandler(this.İslemler);
             // 
-            // pictureBox1
+            // menuStrip1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(207, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.görünümToolStripMenuItem,
+            this.nasılKullanılırToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(884, 28);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // görünümToolStripMenuItem
+            // 
+            this.görünümToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.standartToolStripMenuItem,
+            this.gelişmişToolStripMenuItem});
+            this.görünümToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("görünümToolStripMenuItem.Image")));
+            this.görünümToolStripMenuItem.Name = "görünümToolStripMenuItem";
+            this.görünümToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.görünümToolStripMenuItem.Text = "Görünüm";
+            // 
+            // standartToolStripMenuItem
+            // 
+            this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.standartToolStripMenuItem.Text = "Standart";
+            this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
+            // 
+            // gelişmişToolStripMenuItem
+            // 
+            this.gelişmişToolStripMenuItem.Name = "gelişmişToolStripMenuItem";
+            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.gelişmişToolStripMenuItem.Text = "Gelişmiş";
+            this.gelişmişToolStripMenuItem.Click += new System.EventHandler(this.gelişmişToolStripMenuItem_Click);
+            // 
+            // nasılKullanılırToolStripMenuItem
+            // 
+            this.nasılKullanılırToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nasılKullanılırToolStripMenuItem.Image")));
+            this.nasılKullanılırToolStripMenuItem.Name = "nasılKullanılırToolStripMenuItem";
+            this.nasılKullanılırToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.nasılKullanılırToolStripMenuItem.Text = "Nasıl Kullanılır?";
+            this.nasılKullanılırToolStripMenuItem.Click += new System.EventHandler(this.nasılKullanılırToolStripMenuItem_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(142, 579);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 28);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Geçmiş";
             // 
             // Form1
             // 
@@ -590,6 +602,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(884, 631);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
@@ -605,13 +618,13 @@
             this.Text = "Hesap Makinesi";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,6 +674,7 @@
         private System.Windows.Forms.Button btnKüp;
         private System.Windows.Forms.Button btnTaban;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label4;
     }
 }
 
