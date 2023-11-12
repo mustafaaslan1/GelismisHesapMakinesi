@@ -85,8 +85,9 @@
             // 
             // btnC
             // 
-            this.btnC.BackColor = System.Drawing.Color.Red;
+            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnC.Location = new System.Drawing.Point(26, 36);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(148, 58);
@@ -97,8 +98,9 @@
             // 
             // btnKarakterSil
             // 
-            this.btnKarakterSil.BackColor = System.Drawing.Color.Red;
+            this.btnKarakterSil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnKarakterSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKarakterSil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnKarakterSil.Location = new System.Drawing.Point(180, 36);
             this.btnKarakterSil.Name = "btnKarakterSil";
             this.btnKarakterSil.Size = new System.Drawing.Size(71, 58);
@@ -110,7 +112,7 @@
             // btnÇarpma
             // 
             this.btnÇarpma.BackColor = System.Drawing.Color.Orange;
-            this.btnÇarpma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnÇarpma.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnÇarpma.Location = new System.Drawing.Point(257, 36);
             this.btnÇarpma.Name = "btnÇarpma";
             this.btnÇarpma.Size = new System.Drawing.Size(71, 58);
@@ -181,7 +183,7 @@
             // btnTers
             // 
             this.btnTers.BackColor = System.Drawing.Color.Orange;
-            this.btnTers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTers.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTers.Location = new System.Drawing.Point(257, 97);
             this.btnTers.Name = "btnTers";
             this.btnTers.Size = new System.Drawing.Size(71, 58);
@@ -252,7 +254,7 @@
             // btnToplama
             // 
             this.btnToplama.BackColor = System.Drawing.Color.Orange;
-            this.btnToplama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnToplama.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnToplama.Location = new System.Drawing.Point(257, 161);
             this.btnToplama.Name = "btnToplama";
             this.btnToplama.Size = new System.Drawing.Size(71, 58);
@@ -297,7 +299,7 @@
             // btnÇıkarma
             // 
             this.btnÇıkarma.BackColor = System.Drawing.Color.Orange;
-            this.btnÇıkarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnÇıkarma.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnÇıkarma.Location = new System.Drawing.Point(257, 225);
             this.btnÇıkarma.Name = "btnÇıkarma";
             this.btnÇıkarma.Size = new System.Drawing.Size(71, 58);
@@ -331,7 +333,7 @@
             // btnBölme
             // 
             this.btnBölme.BackColor = System.Drawing.Color.Orange;
-            this.btnBölme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnBölme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBölme.Location = new System.Drawing.Point(257, 289);
             this.btnBölme.Name = "btnBölme";
             this.btnBölme.Size = new System.Drawing.Size(71, 58);
@@ -356,7 +358,7 @@
             // btnEşittir
             // 
             this.btnEşittir.BackColor = System.Drawing.Color.Orange;
-            this.btnEşittir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnEşittir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEşittir.Location = new System.Drawing.Point(180, 289);
             this.btnEşittir.Name = "btnEşittir";
             this.btnEşittir.Size = new System.Drawing.Size(71, 58);
@@ -367,7 +369,7 @@
             // 
             // btnGeçmiş
             // 
-            this.btnGeçmiş.BackColor = System.Drawing.SystemColors.Control;
+            this.btnGeçmiş.BackColor = System.Drawing.Color.DarkCyan;
             this.btnGeçmiş.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGeçmiş.Image = ((System.Drawing.Image)(resources.GetObject("btnGeçmiş.Image")));
             this.btnGeçmiş.Location = new System.Drawing.Point(67, 563);
@@ -380,7 +382,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(21, 77);
             this.label1.Name = "label1";
@@ -389,8 +391,9 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(6, 21);
+            this.textBox1.Location = new System.Drawing.Point(8, 21);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -411,6 +414,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
@@ -423,7 +427,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.BackColor = System.Drawing.SystemColors.ControlDark;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.Location = new System.Drawing.Point(21, 29);
             this.label3.Name = "label3";
@@ -597,14 +601,14 @@
             // standartToolStripMenuItem
             // 
             this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
-            this.standartToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.standartToolStripMenuItem.Text = "Standart";
             this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
             // 
             // gelişmişToolStripMenuItem
             // 
             this.gelişmişToolStripMenuItem.Name = "gelişmişToolStripMenuItem";
-            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gelişmişToolStripMenuItem.Text = "Gelişmiş";
             this.gelişmişToolStripMenuItem.Click += new System.EventHandler(this.gelişmişToolStripMenuItem_Click);
             // 
@@ -630,7 +634,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(884, 631);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox2);

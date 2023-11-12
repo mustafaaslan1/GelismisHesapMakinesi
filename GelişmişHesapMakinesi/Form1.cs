@@ -197,6 +197,7 @@ namespace GelişmişHesapMakinesi
             {
                 double sayi;
                 double fakt = 1;
+                string isaret = ("!");
                 double.TryParse(textBox1.Text, out sayi);
                 try
                 {
@@ -212,13 +213,16 @@ namespace GelişmişHesapMakinesi
                     {
                         textBox1.Text = fakt.ToString();
                         label1.Text = sayi + "!";
+                        geçmiş.Add($"{sayi}{isaret} = {textBox1.Text}");
                     }
                 }
                 catch (Exception ex)
                 {
                     label1.Text = ex.Message;
                     textBox1.Text = "0";
+                    geçmiş.Add($"{sayi}{isaret} = {textBox1.Text}");
                 }
+                
             }
             else if (btn.Text == "±")
             {
@@ -245,8 +249,12 @@ namespace GelişmişHesapMakinesi
                         isaret = "-";
                         break;
 
-                    case 3: 
-                        if (s2 == 0) label1.Text = "∞";
+                    case 3:
+                        if (s2 == 0)
+                        {
+                            label1.Text = "∞";
+                            isaret = "/";
+                        }
                         else
                         {
                             sonuc = s1 / s2;
