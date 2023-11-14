@@ -62,6 +62,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnEkok = new System.Windows.Forms.Button();
@@ -370,7 +371,9 @@
             // btnGeçmiş
             // 
             this.btnGeçmiş.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnGeçmiş.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGeçmiş.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGeçmiş.ForeColor = System.Drawing.Color.DarkCyan;
             this.btnGeçmiş.Image = ((System.Drawing.Image)(resources.GetObject("btnGeçmiş.Image")));
             this.btnGeçmiş.Location = new System.Drawing.Point(67, 563);
             this.btnGeçmiş.Name = "btnGeçmiş";
@@ -393,7 +396,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox1.Location = new System.Drawing.Point(8, 21);
+            this.textBox1.Location = new System.Drawing.Point(6, 21);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -457,6 +460,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.textBox1);
@@ -465,6 +469,15 @@
             this.groupBox2.Size = new System.Drawing.Size(562, 137);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(163, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 29);
+            this.label5.TabIndex = 9;
             // 
             // groupBox3
             // 
@@ -601,14 +614,14 @@
             // standartToolStripMenuItem
             // 
             this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
-            this.standartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.standartToolStripMenuItem.Text = "Standart";
             this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
             // 
             // gelişmişToolStripMenuItem
             // 
             this.gelişmişToolStripMenuItem.Name = "gelişmişToolStripMenuItem";
-            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.gelişmişToolStripMenuItem.Text = "Gelişmiş";
             this.gelişmişToolStripMenuItem.Click += new System.EventHandler(this.gelişmişToolStripMenuItem_Click);
             // 
@@ -711,6 +724,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEkok;
         private System.Windows.Forms.Button btnEbob;
+        private System.Windows.Forms.Label label5;
     }
 }
 

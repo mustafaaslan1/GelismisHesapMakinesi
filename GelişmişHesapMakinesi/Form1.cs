@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -26,7 +27,6 @@ namespace GelişmişHesapMakinesi
 
         private void İslemler(object sender, EventArgs e)
         {
-   
             Button btn = (Button)sender;
             if (btn.Text == "+")
             {
@@ -86,14 +86,14 @@ namespace GelişmişHesapMakinesi
                 {
                     MessageBox.Show("Lütfen virgülle ayrılmış iki sayı giriniz.");
                     return;
-
                 }
 
                 int s1 = Convert.ToInt32(girilendeger[0]);
                 int s2 = Convert.ToInt32(girilendeger[1]);
                 int max = Math.Max(s1, s2);
                 int ekok = 0;
-                for (int i = max; ; i--)
+
+                for (int i = max; ; i += max)
                 {
                     if (i % s1 == 0 && i % s2 == 0)
                     {
@@ -101,11 +101,11 @@ namespace GelişmişHesapMakinesi
                         break;
                     }
                 }
+
                 textBox1.Text = $"Ekok = {ekok}";
                 label1.Text = $"Ekok = {girilendeger[0]}, {girilendeger[1]}";
                 geçmiş.Add($"{s1} ve {s2} için EKOK = {ekok}");
                 label3.Text = $"{RomanRakamlariYazdir(ekok)}";
-
             }
             else if (btn.Text == "x²")
             {
@@ -156,9 +156,12 @@ namespace GelişmişHesapMakinesi
             }
             else if (btn.Text == "√")
             {
+                isaret = "√";
                 double.TryParse(textBox1.Text, out s1);
                 textBox1.Text = Math.Sqrt(s1).ToString();
                 label1.Text = "√" + s1;
+                geçmiş.Add($"{isaret}{s1} = {textBox1.Text}");
+
             }
             else if (btn.Text == "Üs")
             {
@@ -176,6 +179,7 @@ namespace GelişmişHesapMakinesi
                 textBox1.Text = "0";
                 label1.Text = "";
                 label3.Text = "";
+                label5.Text = "";
             }
             else if (btn.Text == "<")
             {
@@ -222,7 +226,7 @@ namespace GelişmişHesapMakinesi
                     textBox1.Text = "0";
                     geçmiş.Add($"{sayi}{isaret} = {textBox1.Text}");
                 }
-                
+
             }
             else if (btn.Text == "±")
             {
@@ -231,7 +235,6 @@ namespace GelişmişHesapMakinesi
                     double currentNumber = double.Parse(textBox1.Text);
                     textBox1.Text = (-currentNumber).ToString();
                 }
-
             }
             if (btn.Text == "=")
             {
@@ -288,8 +291,7 @@ namespace GelişmişHesapMakinesi
                 textBox1.Text = sonuc.ToString();
                 geçmiş.Add($"{s1} {isaret} {s2} = {textBox1.Text}");
                 label3.Text = $"{RomanRakamlariYazdir(double.Parse(textBox1.Text))}";
-
-                
+                label5.Text = s1.ToString() + isaret + s2.ToString() + "=";
                 secim = 0;
             }
 
@@ -310,9 +312,8 @@ namespace GelişmişHesapMakinesi
 
         private void btnGeçmiş_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
-            listBox1.Items.AddRange(geçmiş.ToArray());
-
+                listBox1.Items.Clear();
+                listBox1.Items.AddRange(geçmiş.ToArray());      
         }
         private string RomanRakamlariYazdir(double sayi)
         {
@@ -332,6 +333,8 @@ namespace GelişmişHesapMakinesi
             int birlerBasamagi = (int)(sayi % 10);
 
             return binler[binlerBasamagi] + yuzler[yuzlerBasamagi] + onlar[onlarBasamagi] + birler[birlerBasamagi];
+
+            
         }
 
         private void standartToolStripMenuItem_Click(object sender, EventArgs e)
