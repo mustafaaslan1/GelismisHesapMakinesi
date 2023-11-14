@@ -107,6 +107,42 @@ namespace GelişmişHesapMakinesi
                 geçmiş.Add($"{s1} ve {s2} için EKOK = {ekok}");
                 label3.Text = $"{RomanRakamlariYazdir(ekok)}";
             }
+            else if (btn.Text == "Sin")
+            {
+                double.TryParse(textBox1.Text, out s1);
+                textBox1.Text = Math.Sin(Math.PI * s1 / 180).ToString();
+                label1.Text = "Sin" + s1;
+                geçmiş.Add($"{"Sin"}{s1} = {textBox1.Text}");
+            }
+            else if (btn.Text == "Cos")
+            {
+                double.TryParse(textBox1.Text, out s1);
+                textBox1.Text = Math.Cos(Math.PI * s1 / 180).ToString();
+                label1.Text = "Cos" + s1;
+                geçmiş.Add($"{"Cos"}{s1} = {textBox1.Text}");
+            }
+            else if (btn.Text == "Tan")
+            {
+                double.TryParse(textBox1.Text, out s1);
+                textBox1.Text = Math.Tan(Math.PI * s1 / 180).ToString();
+                label1.Text = "Tan" + s1;
+                geçmiş.Add($"{"Tan"}{s1} = {textBox1.Text}");
+            }
+            else if(btn.Text == "Log")
+            {
+                string[] degerler = textBox1.Text.Split(',');
+                if (degerler.Length != 2)
+                {
+                    MessageBox.Show("Lütfen virgülle ayrılmış iki sayı giriniz.");
+                    return;
+                }
+                int s1 = Convert.ToInt32(degerler[0]);
+                int s2 = Convert.ToInt32(degerler[1]);
+                double sonuc = Math.Log(s1, s2);
+                textBox1.Text = "Log(" + s1 + ", " + s2 + ") = " + sonuc.ToString();
+                label1.Text = $"Log = {degerler[0]}, {degerler[1]}";
+                geçmiş.Add($"{"Log"}{s1},{s2} = {textBox1.Text}");
+            }
             else if (btn.Text == "x²")
             {
                 double kare = Convert.ToDouble(textBox1.Text);
@@ -191,11 +227,11 @@ namespace GelişmişHesapMakinesi
                 }
 
             }
-            else if (btn.Text == "PI")
+            else if (btn.Text == "π")
             {
                 double.TryParse(textBox1.Text, out s1);
                 textBox1.Text = Math.PI.ToString();
-                label1.Text = "PI";
+                label1.Text = "π";
             }
             else if (btn.Text == "n!")
             {
@@ -370,7 +406,9 @@ namespace GelişmişHesapMakinesi
                 " 2- '<' Butonuna tıklarsanız son yazmış olduğunuz sayıyı silecektir.\n\n" +
                 " 3- Faktöriyel hesaplaması yapmak istediğinizde önce sayıyı girip sonra faktöriyel işaretine tıklayabilirsiniz.\n\n" +
                 " 4- Köklü sayı hesaplaması yapmak istediğiniz zaman önce sayıya tıklayıp ardından kök işaretine tıklayınız.\n\n" +
-                " 5- Pi sayısını hesaplamak istiyorsanız sadece 'Pİ' ikonuna tıklamanız yeterlidir." +
+                " 5- Pi sayısını hesaplamak istiyorsanız sadece 'Pİ' ikonuna tıklamanız yeterlidir.\n\n" +
+                " 6- LOGARİTMA HESAPLAMASI YAPARKEN İLK ÖNCE ÜSSÜ SONRA TABANI GİRMELİSİNİZ." +
+                " ÖRNEĞİN LOG 2 TABANINDA 25 YAZACAKSANIZ, '25,2' ŞEKLİNDE YAZMANIZ GEREKMEKTEDİR.\n\n" +
                 " NOT : Kare ve küp işlemlerinde = 'e basmanıza gerek yoktur. Sayı seçip kare veya kök tuşuna bastığınızda sonucu görebilirsiniz.\n\n" +
                 " NOT : Yaptığınız işlemler kaydedilmektedir, Geçmiş butonuna tıklarsanız yaptığınız işlemleri görebilirsiniz.\n\n", "Gelişmiş Hesap Makinesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         } 
