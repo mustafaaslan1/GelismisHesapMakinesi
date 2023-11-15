@@ -53,7 +53,6 @@
             this.btnBölme = new System.Windows.Forms.Button();
             this.btnKök = new System.Windows.Forms.Button();
             this.btnEşittir = new System.Windows.Forms.Button();
-            this.btnGeçmiş = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +65,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnEkok = new System.Windows.Forms.Button();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.btnTan = new System.Windows.Forms.Button();
+            this.btnCos = new System.Windows.Forms.Button();
             this.btnEbob = new System.Windows.Forms.Button();
+            this.btnSin = new System.Windows.Forms.Button();
             this.btnTaban = new System.Windows.Forms.Button();
             this.btnKüp = new System.Windows.Forms.Button();
             this.btnKare = new System.Windows.Forms.Button();
@@ -75,11 +78,7 @@
             this.standartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelişmişToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nasılKullanılırToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnSin = new System.Windows.Forms.Button();
-            this.btnCos = new System.Windows.Forms.Button();
-            this.btnTan = new System.Windows.Forms.Button();
-            this.btnLog = new System.Windows.Forms.Button();
+            this.geçmişToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -326,7 +325,7 @@
             // 
             // btnVirgül
             // 
-            this.btnVirgül.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnVirgül.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnVirgül.Location = new System.Drawing.Point(27, 289);
             this.btnVirgül.Name = "btnVirgül";
             this.btnVirgül.Size = new System.Drawing.Size(71, 58);
@@ -372,20 +371,6 @@
             this.btnEşittir.UseVisualStyleBackColor = false;
             this.btnEşittir.Click += new System.EventHandler(this.İslemler);
             // 
-            // btnGeçmiş
-            // 
-            this.btnGeçmiş.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnGeçmiş.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGeçmiş.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGeçmiş.ForeColor = System.Drawing.Color.DarkCyan;
-            this.btnGeçmiş.Image = ((System.Drawing.Image)(resources.GetObject("btnGeçmiş.Image")));
-            this.btnGeçmiş.Location = new System.Drawing.Point(67, 563);
-            this.btnGeçmiş.Name = "btnGeçmiş";
-            this.btnGeçmiş.Size = new System.Drawing.Size(69, 65);
-            this.btnGeçmiş.TabIndex = 2;
-            this.btnGeçmiş.UseVisualStyleBackColor = false;
-            this.btnGeçmiş.Click += new System.EventHandler(this.btnGeçmiş_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -404,7 +389,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(548, 103);
+            this.textBox1.Size = new System.Drawing.Size(578, 103);
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -455,7 +440,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(207, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(196, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -470,7 +455,7 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Location = new System.Drawing.Point(12, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(562, 137);
+            this.groupBox2.Size = new System.Drawing.Size(590, 137);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
@@ -545,6 +530,45 @@
             this.btnEkok.UseVisualStyleBackColor = false;
             this.btnEkok.Click += new System.EventHandler(this.İslemler);
             // 
+            // btnLog
+            // 
+            this.btnLog.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnLog.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLog.Location = new System.Drawing.Point(106, 327);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(92, 45);
+            this.btnLog.TabIndex = 2;
+            this.btnLog.Text = "Log";
+            this.btnLog.UseVisualStyleBackColor = false;
+            this.btnLog.Click += new System.EventHandler(this.İslemler);
+            // 
+            // btnTan
+            // 
+            this.btnTan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTan.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTan.Location = new System.Drawing.Point(8, 327);
+            this.btnTan.Name = "btnTan";
+            this.btnTan.Size = new System.Drawing.Size(92, 45);
+            this.btnTan.TabIndex = 2;
+            this.btnTan.Text = "Tan";
+            this.btnTan.UseVisualStyleBackColor = false;
+            this.btnTan.Click += new System.EventHandler(this.İslemler);
+            // 
+            // btnCos
+            // 
+            this.btnCos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnCos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCos.Location = new System.Drawing.Point(106, 276);
+            this.btnCos.Name = "btnCos";
+            this.btnCos.Size = new System.Drawing.Size(92, 45);
+            this.btnCos.TabIndex = 2;
+            this.btnCos.Text = "Cos";
+            this.btnCos.UseVisualStyleBackColor = false;
+            this.btnCos.Click += new System.EventHandler(this.İslemler);
+            // 
             // btnEbob
             // 
             this.btnEbob.BackColor = System.Drawing.SystemColors.Control;
@@ -557,6 +581,19 @@
             this.btnEbob.Text = "EBOB";
             this.btnEbob.UseVisualStyleBackColor = false;
             this.btnEbob.Click += new System.EventHandler(this.İslemler);
+            // 
+            // btnSin
+            // 
+            this.btnSin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSin.Location = new System.Drawing.Point(7, 276);
+            this.btnSin.Name = "btnSin";
+            this.btnSin.Size = new System.Drawing.Size(92, 45);
+            this.btnSin.TabIndex = 2;
+            this.btnSin.Text = "Sin";
+            this.btnSin.UseVisualStyleBackColor = false;
+            this.btnSin.Click += new System.EventHandler(this.İslemler);
             // 
             // btnTaban
             // 
@@ -601,11 +638,12 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nasılKullanılırToolStripMenuItem,
             this.görünümToolStripMenuItem,
-            this.nasılKullanılırToolStripMenuItem});
+            this.geçmişToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(884, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(616, 28);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -622,14 +660,14 @@
             // standartToolStripMenuItem
             // 
             this.standartToolStripMenuItem.Name = "standartToolStripMenuItem";
-            this.standartToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.standartToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.standartToolStripMenuItem.Text = "Standart";
             this.standartToolStripMenuItem.Click += new System.EventHandler(this.standartToolStripMenuItem_Click);
             // 
             // gelişmişToolStripMenuItem
             // 
             this.gelişmişToolStripMenuItem.Name = "gelişmişToolStripMenuItem";
-            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.gelişmişToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.gelişmişToolStripMenuItem.Text = "Gelişmiş";
             this.gelişmişToolStripMenuItem.Click += new System.EventHandler(this.gelişmişToolStripMenuItem_Click);
             // 
@@ -641,79 +679,23 @@
             this.nasılKullanılırToolStripMenuItem.Text = "Nasıl Kullanılır?";
             this.nasılKullanılırToolStripMenuItem.Click += new System.EventHandler(this.nasılKullanılırToolStripMenuItem_Click);
             // 
-            // label4
+            // geçmişToolStripMenuItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(142, 579);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 28);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Geçmiş";
-            // 
-            // btnSin
-            // 
-            this.btnSin.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSin.Location = new System.Drawing.Point(7, 276);
-            this.btnSin.Name = "btnSin";
-            this.btnSin.Size = new System.Drawing.Size(92, 45);
-            this.btnSin.TabIndex = 2;
-            this.btnSin.Text = "Sin";
-            this.btnSin.UseVisualStyleBackColor = false;
-            this.btnSin.Click += new System.EventHandler(this.İslemler);
-            // 
-            // btnCos
-            // 
-            this.btnCos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnCos.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnCos.Location = new System.Drawing.Point(106, 276);
-            this.btnCos.Name = "btnCos";
-            this.btnCos.Size = new System.Drawing.Size(92, 45);
-            this.btnCos.TabIndex = 2;
-            this.btnCos.Text = "Cos";
-            this.btnCos.UseVisualStyleBackColor = false;
-            this.btnCos.Click += new System.EventHandler(this.İslemler);
-            // 
-            // btnTan
-            // 
-            this.btnTan.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnTan.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnTan.Location = new System.Drawing.Point(8, 327);
-            this.btnTan.Name = "btnTan";
-            this.btnTan.Size = new System.Drawing.Size(92, 45);
-            this.btnTan.TabIndex = 2;
-            this.btnTan.Text = "Tan";
-            this.btnTan.UseVisualStyleBackColor = false;
-            this.btnTan.Click += new System.EventHandler(this.İslemler);
-            // 
-            // btnLog
-            // 
-            this.btnLog.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnLog.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLog.Location = new System.Drawing.Point(106, 327);
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(92, 45);
-            this.btnLog.TabIndex = 2;
-            this.btnLog.Text = "Log";
-            this.btnLog.UseVisualStyleBackColor = false;
-            this.btnLog.Click += new System.EventHandler(this.İslemler);
+            this.geçmişToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("geçmişToolStripMenuItem.Image")));
+            this.geçmişToolStripMenuItem.Name = "geçmişToolStripMenuItem";
+            this.geçmişToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.geçmişToolStripMenuItem.Text = "Geçmiş";
+            this.geçmişToolStripMenuItem.Click += new System.EventHandler(this.geçmişToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(884, 631);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(616, 566);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnGeçmiş);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -762,7 +744,6 @@
         private System.Windows.Forms.Button btnBölme;
         private System.Windows.Forms.Button btnKök;
         private System.Windows.Forms.Button btnEşittir;
-        private System.Windows.Forms.Button btnGeçmiş;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
@@ -781,7 +762,6 @@
         private System.Windows.Forms.Button btnKüp;
         private System.Windows.Forms.Button btnTaban;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEkok;
         private System.Windows.Forms.Button btnEbob;
         private System.Windows.Forms.Label label5;
@@ -789,6 +769,7 @@
         private System.Windows.Forms.Button btnCos;
         private System.Windows.Forms.Button btnTan;
         private System.Windows.Forms.Button btnLog;
+        private System.Windows.Forms.ToolStripMenuItem geçmişToolStripMenuItem;
     }
 }
 

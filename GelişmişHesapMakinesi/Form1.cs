@@ -348,8 +348,7 @@ namespace GelişmişHesapMakinesi
 
         private void btnGeçmiş_Click(object sender, EventArgs e)
         {
-                listBox1.Items.Clear();
-                listBox1.Items.AddRange(geçmiş.ToArray());      
+            
         }
         private string RomanRakamlariYazdir(double sayi)
         {
@@ -377,9 +376,8 @@ namespace GelişmişHesapMakinesi
         {
             groupBox1.Visible = false;
             groupBox4.Visible = false;
-            btnGeçmiş.Visible = false;
             groupBox2.Size = new System.Drawing.Size(272,108);
-            textBox1.Size = new System.Drawing.Size(260, 80);
+            textBox1.Size = new System.Drawing.Size(263, 83);
             this.Width = 310;
             this.Height = 500;
 
@@ -389,12 +387,31 @@ namespace GelişmişHesapMakinesi
         {
             groupBox1.Visible = true;
             groupBox4.Visible = true;
-            btnGeçmiş.Visible = true;
-            groupBox2.Size = new System.Drawing.Size(420, 110);
-            textBox1.Size = new System.Drawing.Size(410,80);
-            this.Width = 678;
-            this.Height = 550;
+            groupBox2.Size = new System.Drawing.Size(441, 110);
+            textBox1.Size = new System.Drawing.Size(433,85);
+            this.Width = 475;
+            this.Height = 500;
 
+        }
+
+        private void geçmişToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            groupBox1.Visible = true;
+            groupBox1.Size = new System.Drawing.Size(190, 417);
+
+            if (this.Width < 678)
+            {
+                this.Width = 678;
+                this.Height = 500;
+            }
+            else
+            {
+                this.Width = 475;
+                this.Height = 500;
+            }
+
+            listBox1.Items.Clear();
+            listBox1.Items.AddRange(geçmiş.ToArray());
         }
 
         private void nasılKullanılırToolStripMenuItem_Click(object sender, EventArgs e)
@@ -404,10 +421,12 @@ namespace GelişmişHesapMakinesi
                 " - Standart hesap makinesi iken Görünüm kısmından Gelişmiş'e tıklarsanız Gelişmiş hesap makinesine erişebilirsiniz.\n\n" +
                 " 1- Hesaplama yaptıktan sonra 'C' Tuşuna tıklarsanız hesap makinesi sıfırlanmış olacaktır.\n\n" +
                 " 2- '<' Butonuna tıklarsanız son yazmış olduğunuz sayıyı silecektir.\n\n" +
-                " 3- Faktöriyel hesaplaması yapmak istediğinizde önce sayıyı girip sonra faktöriyel işaretine tıklayabilirsiniz.\n\n" +
-                " 4- Köklü sayı hesaplaması yapmak istediğiniz zaman önce sayıya tıklayıp ardından kök işaretine tıklayınız.\n\n" +
-                " 5- Pi sayısını hesaplamak istiyorsanız sadece 'Pİ' ikonuna tıklamanız yeterlidir.\n\n" +
-                " 6- LOGARİTMA HESAPLAMASI YAPARKEN İLK ÖNCE ÜSSÜ SONRA TABANI GİRMELİSİNİZ." +
+                " 3- Geçmiş'e erişmek istiyorsanız üst kısımdan 'Geçmiş' kısmına tıklamanız yeterlidir.\n\n" +
+                " 4- Eğer geçmiş'i geri kapatmak istiyorsanız 'Geçmiş' kısmına tekrar tıklamanız yeterli olacaktır.\n\n" +
+                " 5- Faktöriyel hesaplaması yapmak istediğinizde önce sayıyı girip sonra faktöriyel işaretine tıklayabilirsiniz.\n\n" +
+                " 6- Köklü sayı hesaplaması yapmak istediğiniz zaman önce sayıya tıklayıp ardından kök işaretine tıklayınız.\n\n" +
+                " 7- Pi sayısını hesaplamak istiyorsanız sadece 'Pİ' ikonuna tıklamanız yeterlidir.\n\n" +
+                " 8- LOGARİTMA HESAPLAMASI YAPARKEN İLK ÖNCE ÜSSÜ SONRA TABANI GİRMELİSİNİZ." +
                 " ÖRNEĞİN LOG 2 TABANINDA 25 YAZACAKSANIZ, '25,2' ŞEKLİNDE YAZMANIZ GEREKMEKTEDİR.\n\n" +
                 " NOT : Kare ve küp işlemlerinde = 'e basmanıza gerek yoktur. Sayı seçip kare veya kök tuşuna bastığınızda sonucu görebilirsiniz.\n\n" +
                 " NOT : Yaptığınız işlemler kaydedilmektedir, Geçmiş butonuna tıklarsanız yaptığınız işlemleri görebilirsiniz.\n\n", "Gelişmiş Hesap Makinesi", MessageBoxButtons.OK, MessageBoxIcon.Information);
